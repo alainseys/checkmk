@@ -7,16 +7,13 @@
 </ul>
 
 very easy just run ./configure --with-nagios4 if you are running nagios3 or below run ./configure --with-nagios
-
-runs on debian9 and centos7
-
-post install steps:
+### post install steps:
 
 edit /usr/local/nagios/etc/nagios.cfg
 and add : broker_module=/usr/local/lib/mk-livestatus/livestatus.o /usr/local/nagios/var/rw/live
 restart nagios process
 
-and check if the broker is reporting
+### Broker check (if it is running)
 cat /usr/local/nagios/var/nagios.log
 
 you should see somthing with times hour, minute etc...
@@ -25,8 +22,9 @@ download nagvis from : http://www.nagvis.org/
 extract tarbal
 ./install follow the steps and add 
 
+### Add Code to 000-default.conf
 
-  
+```  
 vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 Alias /nagvis "/usr/local/nagvis/share"
 <Directory "/usr/local/nagvis/share">
@@ -63,5 +61,5 @@ RewriteCond %{REQUEST_URI} ^/nagvis/frontend/nagvis-js
   </IfModule>
 </Directory>
 </code>
-
+```
 
