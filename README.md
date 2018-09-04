@@ -1,5 +1,11 @@
 # checkmk
 
+#Tested on
+<ul>
+  <li>Debian9</li>
+  <li>Centos7</li>
+</ul>
+
 very easy just run ./configure --with-nagios4 if you are running nagios3 or below run ./configure --with-nagios
 
 runs on debian9 and centos7
