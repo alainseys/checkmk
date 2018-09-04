@@ -62,4 +62,10 @@ RewriteCond %{REQUEST_URI} ^/nagvis/frontend/nagvis-js
 </Directory>
 </code>
 ```
+### Restart apache & nagios
+systemctl restart nagios
+systemctl restart apache2
+now navigate to http://127.0.0.1/nagvis login with default credentials admin / admin
 
+#### Debugging
+if you see a white page you have an version of php installed that is not supported by nagvis i recomend php 5.7 or php 7
