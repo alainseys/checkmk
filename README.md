@@ -1,6 +1,6 @@
 # checkmk
 
-#Tested on
+# Tested on
 <ul>
   <li>Debian9</li>
   <li>Centos7</li>
@@ -16,7 +16,7 @@ restart nagios process
 ### Broker check (if it is running)
 cat /usr/local/nagios/var/nagios.log
 
-you should see somthing with times hour, minute etc...
+you should see something with times hour, minute etc...
 
 download nagvis from : http://www.nagvis.org/
 extract tarbal
